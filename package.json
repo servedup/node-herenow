@@ -1,5 +1,11 @@
 {
+  "name":  "herenow",
+  "version": "0.0.2",
+  "description": "A set of libraries to interact with the Voxhub Herenow Websocket API",
+  "main" : "index.js",
   "requires": true,
+  "author": "netsc7ape",
+  "license": "MIT",
   "lockfileVersion": 1,
   "dependencies": {
     "ajv": {
