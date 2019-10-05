@@ -1,6 +1,6 @@
 {
   "name":  "herenow",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A set of libraries to interact with the Voxhub Herenow Websocket API",
   "main" : "index.js",
   "requires": true,
@@ -321,6 +321,7 @@
       "resolved": "https://registry.npmjs.org/verror/-/verror-1.10.0.tgz",
       "version": "1.10.0"
     },
-    "websocket": "^1.0.28"
+    "websocket": "^1.0.28",
+    "xmlhttprequest": "^1.8.0"
   }
 }
