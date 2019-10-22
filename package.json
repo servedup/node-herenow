@@ -1,6 +1,6 @@
 {
   "name":  "herenow",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A set of libraries to interact with the Voxhub Herenow Websocket API",
   "main" : "index.js",
   "requires": true,
