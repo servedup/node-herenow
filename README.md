@@ -60,3 +60,61 @@ var connectionConfig = {
 	}
 }
 ```
+
+Connect to Herenow
+
+```
+var herenowWebSocketClient = new HerenowWebSocketClient(connectionConfig);
+
+var onLoginSuccess =  function(response) {
+	console.log('Login Success');	
+}  
+
+var onLoginFailure =  function(response) {
+	console.log('Login Failure');	
+}  
+
+herenowWebSocketClient.connect(onLoginSuccess,onLoginFailure);
+```
+
+## Subscribing to Events ##
+
+When you have a connection you will need to subscribe to events to begin receiving messages.
+
+
+```
+var onLoginSuccess =  function(response) {
+	
+	var subscribeVoxhubUserEventsCallback = function(message) {
+		console.log('subscribeVoxhubUserEvents '+message.utf8Data);
+	};
+
+	herenowWebSocketClient.subscribeVoxhubUserEvents(null,subscribeVoxhubUserEventsCallback);	
+}
+```
+
+## Adding an Event Listener ##
+
+If you wish to simply listen to all messages.
+
+```
+var herenowWebSocketClient = new HerenowWebSocketClient(connectionConfig);
+
+var onLoginSuccess =  function(response) {
+	console.log('Login Success');	
+}  
+
+var onLoginFailure =  function(response) {
+	console.log('Login Failure');	
+}  
+
+var allMessageListener = function(message) {
+		console.log(message.utf8Data);
+};
+
+herenowWebSocketClient.addMessageListenerCallback(allMessageListener);
+
+herenowWebSocketClient.connect(onLoginSuccess,onLoginFailure);
+```
+
+
